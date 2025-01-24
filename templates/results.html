@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yatırım Analiz ve Tahmin Raporu</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Yatırım Analiz ve Tahmin Raporu</h1>
+        <h2>Hisse: {{ ticker }}</h2>
+        <p>Yatırım Miktarı: {{ amount }} {{ currency }}</p>
+        <p>USD Karşılığı: {{ other_currency_amount_usd | round(2) }} USD</p>
+        <p>TL Karşılığı: {{ other_currency_amount_tl | round(2) }} TL</p>
+        <p>1 USD = {{ rate | round(2) }} TL</p>
+
+        <h3>Geçmişten Günümüze Yatırım Analizi</h3>
+        <table>
+            <tr>
+                <th>Tarih Aralığı</th>
+                <th>Başlangıç Fiyatı (USD)</th>
+                <th>Bitiş Fiyatı (USD)</th>
+                <th>Değişim Oranı (%)</th>
+                <th>Sonuç (USD)</th>
+                <th>Sonuç (TL)</th>
+            </tr>
+            {% for period, data in past_analysis[ticker].items() %}
+            <tr>
+                {% if data == "Veri bulunamadı" %}
+                <td colspan="6">Veri bulunamadı</td>
+                {% else %}
+                <td>{{ data["Tarih Aralığı"] }}</td>
+                <td>{{ data["Başlangıç Fiyatı (USD)"] | round(2) }}</td>
+                <td>{{ data["Bitiş Fiyatı (USD)"] | round(2) }}</td>
+                <td>{{ data["Değişim Oranı (%)"] | round(2) }}</td>
+                <td>{{ data["Sonuç (USD)"] | round(2) }}</td>
+                <td>{{ data["Sonuç (TL)"] | round(2) }}</td>
+                {% endif %}
+            </tr>
+            {% endfor %}
+        </table>
+
+        <h3>Geleceğe Yönelik Tahminler</h3>
+        <table>
+            <tr>
+                <th>Tarih</th>
+                <th>Tahmini Fiyat (USD)</th>
+                <th>Sonuç (USD)</th>
+                <th>Sonuç (TL)</th>
+            </tr>
+            {% for date, data in predictions.items() %}
+            <tr>
+                <td>{{ date }}</td>
+                <td>{{ data["Tahmini Fiyat (USD)"] | round(2) }}</td>
+                <td>{{ data["Yatırım Sonucu (USD)"] | round(2) }}</td>
+                <td>{{ data["Yatırım Sonucu (TL)"] | round(2) }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="/">Ana Sayfaya Dön</a>
+    </div>
+</body>
+</html>
