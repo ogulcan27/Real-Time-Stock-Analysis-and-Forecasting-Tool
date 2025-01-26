@@ -42,7 +42,7 @@
 Şu anda proje üzerinde çalışmaya devam ediyorum. Özellikle iki alanda ilerleme kaydetmeye odaklandım:
 
 + **Feature Engineering:** Veriyi daha anlamlı hale getirmek için yeni özellikler oluşturuyorum ve mevcut özellikleri geliştiriyorum. 
-+ **Model Geliştirme:** Hisse fiyatlarını tahmin edecek modeller üzerinde çalışıyorum. Şu anda birkaç farklı model deniyorum (örneğin; LSTM, Prophet ve bazı regresyon modelleri gibi) ve en iyi sonucu veren modeli bulmaya çalışıyorum.
++ **Model Geliştirme:** Hisse fiyatlarını tahmin edecek modeller üzerinde çalışıyorum. Şu anda birkaç farklı model deniyorum (örneğin; LSTM, Prophet ve bazı ağaç modelleri gibi) ve en iyi sonucu veren modeli bulmaya çalışıyorum.
 
 
 
