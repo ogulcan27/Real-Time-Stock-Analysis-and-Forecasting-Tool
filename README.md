@@ -37,8 +37,12 @@
 
   ![Ekran görüntüsü 2025-01-24 180403](https://github.com/user-attachments/assets/1319a697-85cb-4a69-9e78-fedce57e90a0)
 
+## Devam Eden Çalışmalar: 
 
+Şu anda proje üzerinde çalışmaya devam ediyorum. Özellikle iki alanda ilerleme kaydetmeye odaklandım:
 
++ **Feature Engineering:** Veriyi daha anlamlı hale getirmek için yeni özellikler oluşturuyorum ve mevcut özellikleri geliştiriyorum. 
++ **Model Geliştirme:** Hisse fiyatlarını tahmin edecek modeller üzerinde çalışıyorum. Şu anda birkaç farklı model deniyorum (örneğin; LSTM, Prophet ve bazı regresyon modelleri gibi) ve en iyi sonucu veren modeli bulmaya çalışıyorum.
 
 
 
